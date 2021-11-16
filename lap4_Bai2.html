@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm Mới</title>
+
+</head>
+
+
+<body>
+    <form method="POST" action="xlAddProduct.php">
+        <table style="width: 100%;height: 400px;">
+            <tr>
+                <td colspan="8">
+                    <table style="width: 700px;height: 400px;">
+                        <tr>
+                            <td colspan="8">
+                                <h2 style="text-align: center;">Thêm Sản Phẩm Mới</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="textdn">Mã Sản Phẩm</label></td>
+                            <td colspan="6"><input style="background-color: yellow;" type="text" value="" name="nmProductModel" size="30" placeholder="Nhập Mã Sản Phẩm"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="phone">Tên Sản Phẩm </label></td>
+                            <td colspan="6"><input style="background-color: yellow;" type="text" value="" name="nmProductName" size="30" maxlength="10" placeholder="Nhập Tên Sản Phẩm"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="avata">Hình ảnh </label></td>
+                            <td colspan="6"><input type="file" value="" name="nmProductImage" size="40"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="textdn">Loại Sản Phẩm</label></td>
+                            <td colspan="6">
+                                <select name="nmProductType">
+                                
+                                <option>Điện Thoại Di Động</option>
+                                <option>Máy Tính Bảng</option>
+                                <option>LapTop</option>
+                                <option>Phụ kiện </option>
+                                <option>Điện thoại cũ</option>
+                                <option>Tai nghe</option>
+                            </select></td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="2"><label for="text">Hãng Sản Xuất</label></td>
+                            <td colspan="6">
+                                <select name="nmManufacture">
+                                
+                                <option>Nokia</option>
+                                <option>Samsung</option>
+                                <option>LG</option>
+                                <option>Xiaomi</option>
+                                <option>Iphone</option>
+                               
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label for="text">Kích Thước</label></td>
+                            <td colspan="6"><input type="text" value="" name="nmWidth" size="5" placeholder="0cm"><b><b>W x</b>
+                                <input type="text" value="" name="nmHeight" size="5" placeholder="0cm"><b>H x</b>
+                                <input type="text" value="" name="nmDepth" size="5" placeholder="0cm"> <b>D (cm)</b></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><label for="text">Trọng Lượng </label></td>
+                            <td colspan="6"><input type="text" value="" name="mnWeight" size="10" placeholder="0"><b>g</b></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><label for="textdn">Mô Tả Chi Tiết </label></td>
+                            <td colspan="6"><textarea cols="40" rows="10" name="nmProductDescription" placeholder="Nhập Nội Dung Mô Tả Sản Phẩm !!!!! "></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><label for="text">Chức năng</label></td>
+                            <td colspan="6">
+                                <input type="checkbox" name="nmFunctions" value="Nghe Nhạc" checked>Nghe Nhạc
+                                <input type="checkbox" name="nmFunctions" value="Quay Phim" checked>Quay Phim
+                                <input type="checkbox" name="nmFunctions" value="WiFi" checked>WiFi
+                                <br>
+                                <input type="checkbox" name="nmFunctions" value="Chụp hình" checked>Chụp Hình
+                                <input type="checkbox" name="nmFunctions" value="Bluetooth" checked>Bluetooth
+                                <input type="checkbox" name="nmFunctions" value="3G" checked>3G</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Giới tính</label>
+
+                            </td>
+                            <td>
+                                <select class="form-control" onchange="java_script_:show()">
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option></select>
+                                <script>
+                                    function show() {
+                                        alert('XSS');
+                                    }
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td style="text-align: center;" colspan="8"><input type="submit" value="Thêm">
+                                <input type="submit" value="Xóa"></td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+</body>
+
+</html>
